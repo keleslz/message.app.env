@@ -1,9 +1,9 @@
 FROM node:17
 WORKDIR /app
-COPY ./api-chat-message ./api-chat-message
-COPY ./message-app ./message-app 
+COPY ./api_chat_message ./api_chat_message
+COPY ./client_app_message ./client_app_message 
 
 
 # Just with Docker
-# docker build -t message_app . 
-# docker run -it message_app /bin/bash
+# docker build -t client_app_message . 
+# docker run -it client_app_message /bin/bash
