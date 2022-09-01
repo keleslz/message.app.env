@@ -6,19 +6,19 @@ services:
     image: node:17
     working_dir: /app/api_chat_message
     command: bash -c "npm install && npm run dev"
-    ports: 
+    ports:
       - 3001:3001
     environment:
-     - API_PORT=3001
+      - API_PORT=3001
     volumes:
       - ./api_chat_message:/app/api_chat_message
 
-  # client:
-  #   build: .
-  #   image: node:17
-  #   working_dir: /app/client_app_message
-  #   command:  bash -c "npm install && npm run dev"
-  #   ports: 
-  #     - 3000:3000
-  #   volumes:
-  #     - ./client_app_message:/app/client_app_message
+  client:
+    build: .
+    image: node:17
+    working_dir: /app/client_app_message
+    command: bash -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client_app_message:/app/client_app_message
